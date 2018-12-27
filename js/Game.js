@@ -17,6 +17,8 @@ const Game = (function() {
         if(inputText === Word.randomWord) {
             Outcome.win();
             Score.increaseScore();
+
+            setTimeout(Word.getWords, 2000); //get new word after 2 seconds
         } else {
             Outcome.decreaseChances();
             if(Outcome.chances === 0) {
