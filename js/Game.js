@@ -18,7 +18,11 @@ const Game = (function() {
             Outcome.win();
             Score.increaseScore();
 
-            setTimeout(Word.getWords, 2000); //get new word after 2 seconds
+            setTimeout(() => {
+                Word.getWords();
+                Outcome.resetChances();
+                Outcome.resetMessage();
+             }, 2000); //get new word and reset chances after 2 seconds
         } else {
             Outcome.decreaseChances();
             if(Outcome.chances === 0) {
