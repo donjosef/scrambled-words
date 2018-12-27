@@ -12,6 +12,7 @@ const Outcome = (function() {
 
     function decreaseChances() {
         chances--;
+        publicAPI.chances = chances; //after decrease chances, export publicly
         displayOutcome();
     }
 
@@ -23,10 +24,13 @@ const Outcome = (function() {
         cacheDOM();
     }
  
-    return {
+    const publicAPI = {
         init: init,
         win: win,
         decreaseChances: decreaseChances
     }
+
+    return publicAPI;
+    
     
 })();
