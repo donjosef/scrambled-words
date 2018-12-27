@@ -17,6 +17,8 @@ const Game = (function() {
         const inputText = DOM.guessInput.value;
         if(inputText === Word.randomWord) {
             Score.increaseScore();
+        } else {
+            Score.decreaseScore();
         }
         
     }
