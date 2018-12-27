@@ -17,7 +17,11 @@ const Outcome = (function() {
     }
 
     function displayOutcome() {
-        DOM.outcome_p.textContent = `You wrong! ${chances} chances left...`;
+        if(chances < 1) {
+            DOM.outcome_p.textContent = `You lose! The word was ${Word.randomWord}`;
+        } else {
+            DOM.outcome_p.textContent = `You wrong! ${chances} chances left...`;
+        }
     }
 
     function init() {
