@@ -27,6 +27,12 @@ const Game = (function() {
             Outcome.decreaseChances();
             if(Outcome.chances === 0) {
                 Score.decreaseScore();
+
+                setTimeout(() => {
+                    Word.getWords();
+                    Outcome.resetChances();
+                    Outcome.resetMessage();
+                 }, 3000);
             }
         }
 
