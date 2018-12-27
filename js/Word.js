@@ -21,7 +21,7 @@ const Word = (function() {
     }
 
     function getWords() {
-         fetch('../assets/google10000English.txt')
+         fetch('../../assets/google10000English.txt')
         .then(res => res.text())
         .then(getRandomWord)
     }
