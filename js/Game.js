@@ -11,7 +11,6 @@ const Game = (function() {
         DOM.form.addEventListener('submit', checkMatch);
     }
 
-
     function checkMatch(e) {
         e.preventDefault();
         const inputText = DOM.guessInput.value;
@@ -24,7 +23,8 @@ const Game = (function() {
                 Score.decreaseScore();
             }
         }
-        
+
+        DOM.guessInput.value = ""; //clear input
     }
 
     function init() {
