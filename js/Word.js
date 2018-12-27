@@ -40,7 +40,8 @@ const Word = (function() {
     }
    
     const publicAPI = {
-        init: init
+        init: init,
+        getWords: getWords
     };
 
     return publicAPI;
