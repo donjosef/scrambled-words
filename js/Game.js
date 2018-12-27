@@ -11,6 +11,16 @@ const Game = (function() {
         DOM.form.addEventListener('submit', checkMatch);
     }
 
+
+    function checkMatch(e) {
+        e.preventDefault();
+        const inputText = DOM.guessInput.value;
+        if(inputText === Word.randomWord) {
+            Score.increaseScore();
+        }
+        
+    }
+
     function init() {
         cacheDOM();
         bindEvents();
