@@ -20,7 +20,9 @@ const Game = (function() {
             Score.increaseScore();
         } else {
             Outcome.decreaseChances();
-            Score.decreaseScore();
+            if(Outcome.chances === 0) {
+                Score.decreaseScore();
+            }
         }
         
     }
